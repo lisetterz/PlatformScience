@@ -8,13 +8,13 @@ This code intents to solve a practical tests given by Platform Science.
 
 In oder for this program to work, 2 files are needed which are alredy provided within the [data](/data) repository.
 
-[**Drivers file**](/data/10-list-drivers.txt)
+**Drivers file**
 <br>
- This document provides a list of n elements that are names of the available drivers to deliver the shipments separated by line. You can edit the same or create another file and provide the location of the file in the [addressFile](https://github.com/lisetterz/PlatformScience/blob/CleanCode/main.go#LL13C30-L13C30) constant.
+ [This](/data/10-list-drivers.txt) document provides a list of n elements that are names of the available drivers to deliver the shipments separated by line. You can edit the same or create another file and provide the location of the file in the [addressFile](https://github.com/lisetterz/PlatformScience/blob/CleanCode/main.go#LL13C30-L13C30) constant.
 
-[**Addresses file**](/data/10-list-addresses.txt)
+**Addresses file**
 <br>
-This file contains a list of addresses of the shipments that need to be delivered. You can also edit this file respectine the line separator or create a new file and provide it as the input in the [driversFile](https://github.com/lisetterz/PlatformScience/blob/CleanCode/main.go#L14).
+[This](/data/10-list-addresses.txt) file contains a list of addresses of the shipments that need to be delivered. You can also edit this file respectine the line separator or create a new file and provide it as the input in the [driversFile](https://github.com/lisetterz/PlatformScience/blob/CleanCode/main.go#L14).
 
 > Notes: The number of drivers must match the number of addresses in order to work.
 
