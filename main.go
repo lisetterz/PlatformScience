@@ -9,16 +9,21 @@ import (
 	"strings"
 )
 
+const (
+	addresswaFile = "data/10-list-addresses.txt"
+	driversFile   = "data/10-list-drivers.txt"
+)
+
 func main() {
 
 	// read the input files
-	addresses, err := readFile("data/10-list-addresses.txt")
+	addresses, err := readFile(addresswaFile)
 
 	if err != nil {
 		fmt.Printf("error: %s", err.Error())
 	}
 
-	drivers, err := readFile("data/10-list-drivers.txt")
+	drivers, err := readFile(driversFile)
 	if err != nil {
 		fmt.Printf("error: %s", err.Error())
 	}
@@ -99,53 +104,6 @@ func remove(s []int, i int) []int {
 	s[i] = s[len(s)-1]
 	return s[:len(s)-1]
 }
-
-func geMaxSS(drivers []string, f []*structs.File) []*structs.File {
-	output := []*structs.File{}
-
-	for _, driver := range drivers {
-
-		driverMap := make(map[float32]*structs.File)
-
-		for _, j := range f {
-
-			if j.Shipment.Driver == driver {
-
-				driverMap[j.Ss] = j
-			}
-
-		}
-
-		keys := make([]float64, 0, len(driverMap))
-
-		for k := range driverMap {
-			keys = append(keys, float64(k))
-		}
-		sort.Float64s(keys)
-
-		lastKey := float32(keys[len(keys)-1])
-		output = append(output, driverMap[lastKey])
-	}
-
-	return output
-}
-
-/*
-func createFile( shipmentList []*file ) error{
-	file, err := os.Create("output.txt")
-	if err != nil {
-		return err
-	}
-
-	defer file.Close()
-	// iterate map
-
-	for _,j := range shipmentList {
-		file.WriteString(fmt.Sprintf("%s %s", j.))
-	}
-
-	return nil
-}*/
 
 func readFile(fileName string) ([]string, error) {
 	f, err := os.Open(fileName)
