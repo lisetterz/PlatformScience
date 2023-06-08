@@ -20,7 +20,7 @@ This file contains a list of addresses of the shipments that need to be delivere
 
 ## Required tools
 - You need to have Go 1.17+ installed in your machine to run the code. [Here](https://go.dev/doc/install) is a guide on how to install int.
-- Download the code from this repo:
+- Fork this repository.
 
 # How to run
 Open the terminal in the location of the code and run the below command:
