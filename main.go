@@ -10,14 +10,14 @@ import (
 )
 
 const (
-	addresswaFile = "data/10-list-addresses.txt"
+	addressesFile = "data/10-list-addresses.txt"
 	driversFile   = "data/10-list-drivers.txt"
 )
 
 func main() {
 
 	// read the input files
-	addresses, err := readFile(addresswaFile)
+	addresses, err := readFile(addressesFile)
 
 	if err != nil {
 		fmt.Printf("error: %s", err.Error())

@@ -10,10 +10,11 @@ In oder for this program to work, 2 files are needed which are alredy provided w
 
 [**Drivers file**](/data/10-list-drivers.txt)
 <br>
- This document provides a list of n elements that are names of the available drivers to deliver the shipments separated by line. You can edit the same or create another file and provide the address in the input code.
+ This document provides a list of n elements that are names of the available drivers to deliver the shipments separated by line. You can edit the same or create another file and provide the location of the file in the [addressFile](https://github.com/lisetterz/PlatformScience/blob/CleanCode/main.go#LL13C30-L13C30) constant.
 
 [**Addresses file**](/data/10-list-addresses.txt)
-This file contains a list of addresses of the shipments that need to be delivered. You can also edit this file respectine the line separator or create a new file and provide it as the input.
+<br>
+This file contains a list of addresses of the shipments that need to be delivered. You can also edit this file respectine the line separator or create a new file and provide it as the input in the [driversFile](https://github.com/lisetterz/PlatformScience/blob/CleanCode/main.go#L14).
 
 > Notes: The number of drivers must match the number of addresses in order to work.
 
